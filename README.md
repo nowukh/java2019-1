@@ -1,2 +1,5 @@
-# 2019년도 1학기 자바 실습 
+# 2019-1 java practice
+- 3.07
+- 3.14 inheritance / polymorphism
+
 
