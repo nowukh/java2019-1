@@ -1,5 +1,6 @@
 # 2019-1 java practice
-| 3.07 | |
-| 3.14 | inheritance / polymorphism |
-
+| date        | content           
+| ------------- |:-------------:| 
+| 03.04     | OT | 
+| 03.14| inheritance / polymorphism      | 
 
