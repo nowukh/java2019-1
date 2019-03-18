@@ -1,2 +1,7 @@
-# 2019년도 1학기 자바 실습 
+# 2019-1 java practice
+| date        | content           
+| ------------- |:-------------:| 
+| 03.04     | OT | 
+| 03.14| inheritance / polymorphism      | 
+
 
