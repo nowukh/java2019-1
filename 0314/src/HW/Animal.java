@@ -3,7 +3,7 @@ package HW;
 
 public abstract class Animal {
     public String picture;
-    public Food food;
+    private Food food;
     public Hunger hunger;
     public Boundaries boundaries;
     public Location location;
@@ -27,5 +27,12 @@ public abstract class Animal {
 
     }
 
+    public Food getFood() {
+        return food;
+    }
+
+    public void setFood(Food food) {
+        this.food = food;
+    }
 }
 

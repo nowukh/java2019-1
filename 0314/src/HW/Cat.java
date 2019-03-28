@@ -3,7 +3,7 @@ package HW;
 public class Cat extends Feline {
     public Cat(String pic, Hunger hung, Boundaries bound, Location loc) {
         picture = pic;
-        food = Food.GRASS;
+//        food = Food.GRASS;
         hunger = hung;
         boundaries = bound;
         location = loc;
