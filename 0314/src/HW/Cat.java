@@ -1,6 +1,6 @@
 package HW;
 
-public class Cat extends Feline {
+public class Cat extends Feline implements Pet {
     public Cat(String pic, Hunger hung, Boundaries bound, Location loc) {
         picture = pic;
 //        food = Food.GRASS;
@@ -17,5 +17,10 @@ public class Cat extends Feline {
     @Override
     public void eat() {
         System.out.println("cat eat");
+    }
+
+    @Override
+    public void hello() {
+        System.out.println("cat hello");
     }
 }

@@ -11,5 +11,6 @@ public class LauncherInheritTest {
         System.out.println("before: " + hippo.getFood());
         hippo.setFood(Food.GRASS);
         System.out.println("after: " + hippo.getFood());
+
     }
 }

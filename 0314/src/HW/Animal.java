@@ -26,6 +26,9 @@ public abstract class Animal {
     public void roam(){
 
     }
+    private void privateMethod(){
+        System.out.println("this is private");
+    }
 
     public Food getFood() {
         return food;
