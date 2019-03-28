@@ -1,10 +1,13 @@
 package HW;
 
 public class Wolf extends Canine{
-    public Wolf(String picture, Hunger hunger, Boundaries boundaries, Location location) {
-        super(picture, hunger, boundaries, location);
+    public Wolf(String pic, Hunger hung, Boundaries bound, Location loc) {
+        picture = pic;
+        food = Food.GRASS;
+        hunger = hung;
+        boundaries = bound;
+        location = loc;
     }
-
     @Override
     public void makeNoise() {
         System.out.println("wolf makeNoise");

@@ -1,8 +1,12 @@
 package HW;
 
 public class Hippo extends Animal {
-    public Hippo(String picture, Hunger hunger, Boundaries boundaries, Location location) {
-        super(picture, Food.GRASS, hunger, boundaries, location);
+    public Hippo(String pic, Hunger hung, Boundaries bound, Location loc) {
+        picture = pic;
+        food = Food.GRASS;
+        hunger = hung;
+        boundaries = bound;
+        location = loc;
     }
 
     @Override

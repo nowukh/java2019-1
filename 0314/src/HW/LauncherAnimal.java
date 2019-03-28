@@ -48,8 +48,7 @@ public class LauncherAnimal {
 
         for (Animal animal: animals) {
 
-            System.out.println("======"+animal.getClass()+"======");
-            System.out.println(animal.toString());
+            System.out.println("======"+animal.getClass().getSimpleName()+"======");
             animal.makeNoise();
             animal.eat();
             animal.sleep();

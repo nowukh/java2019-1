@@ -1,8 +1,12 @@
 package HW;
 
 public class Tiger extends Feline{
-    public Tiger(String picture, Hunger hunger, Boundaries boundaries, Location location) {
-        super(picture, hunger, boundaries, location);
+    public Tiger(String pic, Hunger hung, Boundaries bound, Location loc) {
+        picture = pic;
+        food = Food.GRASS;
+        hunger = hung;
+        boundaries = bound;
+        location = loc;
     }
 
     @Override
