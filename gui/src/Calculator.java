@@ -15,19 +15,16 @@ public class Calculator extends JFrame implements ActionListener {
         setSize(400,500);
         setLayout(new BorderLayout());
 
-        //결과 출력 textfield
+        //결과 출력 textfield 레이아웃 설정
         resultTF = new JTextField("",15);
-        JPanel resultPanel =  new JPanel(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.weightx = 1;
-        gbc.gridwidth = GridBagConstraints.REMAINDER;
-        resultPanel.add(resultTF, gbc);
+        JPanel resultPanel =  new JPanel(new GridLayout(0,1));
+        resultPanel.add(resultTF);
 
-        //계산기 버튼
+        //계산기 버튼 레이아웃 설정
         JPanel btnPanel =  new JPanel();
         btnPanel.setLayout(new GridLayout(5,4,5,5));
 
+        // 버튼 생성 및 패널에 추가
         String[] btnValues = {"AC","+/-","%","/","7","8","9","X","4","5","6","-","1","2","3","+"," ","0",".","="};
 
         for (String val : btnValues){
@@ -37,6 +34,7 @@ public class Calculator extends JFrame implements ActionListener {
             btns.add(btn);
         }
 
+        // 컨테이너에 패널 추가
         add(resultPanel,BorderLayout.NORTH);
         add(btnPanel);
 
