@@ -12,12 +12,12 @@ public class Calculator extends JFrame implements ActionListener {
 
     }
     public Calculator(){
-        setSize(400,500);
+
         setLayout(new BorderLayout());
 
         //결과 출력 textfield 레이아웃 설정
         resultTF = new JTextField("",15);
-        JPanel resultPanel =  new JPanel(new GridLayout(0,1));
+        JPanel resultPanel =  new JPanel(new GridLayout(1,1));
         resultPanel.add(resultTF);
 
         //계산기 버튼 레이아웃 설정
@@ -38,6 +38,8 @@ public class Calculator extends JFrame implements ActionListener {
         add(resultPanel,BorderLayout.NORTH);
         add(btnPanel);
 
+        //window 관련 설정
+        setSize(400,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
