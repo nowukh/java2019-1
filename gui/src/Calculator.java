@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,11 +15,15 @@ public class Calculator extends JFrame implements ActionListener {
 
     public Calculator(){
         setLayout(new BorderLayout()); //최상위 프레임에 border layout 설정
+        setBackground(Color.white);
 
         //결과 출력 textfield 레이아웃 설정
         resultTF = new JTextField("0",15);
-        resultTF.setFont(new Font("돋움", Font.PLAIN, 50));
+        resultTF.setFont(new Font("돋움", Font.PLAIN, 60));
         resultTF.setFocusable(false);
+        resultTF.setBorder(null);
+        resultTF.setHorizontalAlignment(JTextField.RIGHT);
+
         // 패널에 추가
         JPanel resultPanel =  new JPanel(new GridLayout(1,1));
         resultPanel.add(resultTF);
@@ -30,10 +35,31 @@ public class Calculator extends JFrame implements ActionListener {
         // 버튼 생성 및 패널에 추가
         String[] btnValues = {"AC","+/-","%","/","7","8","9","X","4","5","6","-","1","2","3","+"," ","0",".","="};
 
-        for (String val : btnValues){
-            JButton btn = new JButton(val);
-            btn.addActionListener(this);
+        for (int i = 0; i < btnValues.length; i++){
+            String val = btnValues[i];
+
+            //버튼은 버튼 색 변경을 위해 JButton을 상속받은 CalcBtn 클래스를 이용
+            CalcBtn btn = new CalcBtn(val);
+
+            btn.setForeground(Color.white);
+            btn.setBorder(null);
             btn.setFont(new Font("돋움", Font.PLAIN, 30));
+
+            if(i < 3){ // AC, +-, % 색 변경
+                btn.setBackground(new Color(64, 62, 63));
+                btn.setPressedBackgroundColor(new Color(160,160,160));
+            }
+            else if(i % 4 == 3){ // 연산자 색 변경
+                btn.setBackground(new Color(243, 162, 60));
+                btn.setPressedBackgroundColor(new Color(193,128,45));
+            }
+            else{ //키패드 색 변경
+                btn.setBackground(new Color(95, 95, 95));
+                btn.setPressedBackgroundColor(new Color(160,160,160));
+            }
+
+
+            btn.addActionListener(this);
             btnPanel.add(btn);
             btns.add(btn);
         }
